@@ -33,12 +33,18 @@ function main()
         vertexColors: THREE.VertexColors,
         vertexShader: document.getElementById('lambertian.vert').text,
         fragmentShader: document.getElementById('lambertian.frag').text,
+        uniforms: {
+          light_position: { type: 'v3', value: light.position }
+        }
     });
 
     var material_phong = new THREE.ShaderMaterial({
         vertexColors: THREE.VertexColors,
         vertexShader: document.getElementById('phong.vert').text,
         fragmentShader: document.getElementById('phong.frag').text,
+        uniforms: {
+          light_position: { type: 'v3', value: light.position }
+        }
     });
 
     var torus_knot_lambertian = new THREE.Mesh( geometry, material_lambertian );

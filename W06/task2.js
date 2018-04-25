@@ -47,22 +47,34 @@ function main()
         vertexColors: THREE.VertexColors,
         vertexShader: document.getElementById('gouraud_lambertian.vert').text,
         fragmentShader: document.getElementById('gouraud_lambertian.frag').text,
+        uniforms: {
+          light_position: { type: 'v3', value: light.position }
+        }
     });
     var material_gouraud_phong = new THREE.ShaderMaterial({
         vertexColors: THREE.VertexColors,
         vertexShader: document.getElementById('gouraud_phong.vert').text,
         fragmentShader: document.getElementById('gouraud_phong.frag').text,
+        uniforms: {
+          light_position: { type: 'v3', value: light.position }
+        }
     });
 
     var material_phong_lambertian = new THREE.ShaderMaterial({
         vertexColors: THREE.VertexColors,
         vertexShader: document.getElementById('phong_lambertian.vert').text,
         fragmentShader: document.getElementById('phong_lambertian.frag').text,
+        uniforms: {
+          light_position: { type: 'v3', value: light.position }
+        }
     });
     var material_phong_phong = new THREE.ShaderMaterial({
         vertexColors: THREE.VertexColors,
         vertexShader: document.getElementById('phong_phong.vert').text,
         fragmentShader: document.getElementById('phong_phong.frag').text,
+        uniforms: {
+          light_position: { type: 'v3', value: light.position }
+        }
     });
 
     var torus_knot_gouraud_lambertian = new THREE.Mesh( geometry, material_gouraud_lambertian );
