@@ -1,0 +1,38 @@
+<html>
+  <head>
+	  <title>W10: Task 02</title>
+  </head>
+  <body style="margin:0">
+  <style>
+div#floating-menu {
+    position: fixed;
+    top: 50px;
+    width: 0px;
+    height: 0px;
+    left: 10px;
+    z-index: 9999;
+}
+</style>
+    <div id=floating-menu>
+      <div>
+        <input type="range" id="isovalue" value="128" min="0" max="254" oninput="document.getElementById('output1').value=this.value">
+        <span>isovalue=<output id="output1">128</output>
+        </span>
+      </div>
+    </div>
+
+	<script src="three.min.js"></script>
+	<script src="TrackballControls.js"></script>
+	<script src="http://threejs.org/examples/js/math/Lut.js"></script>
+	<script src="http://naohisas.github.io/KVS.js/Build/KVS.min.js"></script>
+	<script src="http://naohisas.github.io/KVS.js/Build/KVS2THREE.min.js"></script>
+	<script src="http://naohisas.github.io/KVS.js/Source/KVSLobsterData.js"></script>
+	<script src="Bounds.js"></script>
+	<script src="Isosurfaces_task2.js"></script>
+	<script src="task2.js"></script>
+	<script>
+	 main();
+	</script>
+
+    </body>
+</html>
